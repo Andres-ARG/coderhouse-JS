@@ -1,6 +1,6 @@
 /* Pido un monto a pagar y luego en que cantidad de cuotas quiere pagar. Muestro por consola el monto elegido, el interes y el total a pagar*/
 
-let monto = parseInt(prompt("Ingrese el total del monto a pagar"))
+/*let monto = parseInt(prompt("Ingrese el total del monto a pagar"))
 let cuotas = parseInt(prompt("En cuantas cuotas desea pagar el monto?" + "\n" + "En 1 cuota no tiene interes" + "\n" + "En 3 cuotas tiene 5% de interes" + "\n" + "En 6 cuotas tiene 10% de interes" + "\n" + "En 9 cuotas tiene 15% de interes" + "\n" + "En 12 cuotas tiene 20% de interes"))
 const interes5 = 5*monto/100
 const interes10 = 10*monto/100
@@ -21,4 +21,4 @@ if(cuotas === 1){
 while(monto <= 0 || cuotas < 1 || isNaN(monto) || isNaN(cuotas)){
     monto = parseInt(prompt("Ingrese el total del monto a pagar"))
     cuotas = parseInt(prompt("En cuantas cuotas desea pagar el monto?" + "\n" + "En 1 cuota no tiene interes" + "\n" + "En 3 cuotas tiene 5% de interes" + "\n" + "En 6 cuotas tiene 10% de interes" + "\n" + "En 9 cuotas tiene 15% de interes" + "\n" + "En 12 cuotas tiene 20% de interes"))
-}
+}*/
