@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Syne Mono', monospace;
+}
+
+/* HEADER */
+
+.header h1{
+    text-align: center;
+    background-color: darkolivegreen;
+}
+
+/* MAIN */
+
+.contenedorLibros{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.item{
+    text-align: center;
+    border: 1px solid black;
+    margin: 10px;
+    box-shadow: 9px 9px 30px -8px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    padding: 10px;
+}
+.item p{
+    font-size: 12px;
+}
+.item img{
+    border-radius: 5px;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align: center;
+    background-color: rgb(157, 179, 119);
+    padding: 5px;
+}
