@@ -27,13 +27,22 @@ const opciones = parseInt(prompt(
     5- Filtrar
     6- Salir
     `
-))
-switch(opciones){
-    case 1:{
+    ))
+    class libro{
+        constructor(nombre, autor, publicacion, idioma){
+            this.nombre = prompt("Ingrese el nombre del libro")
+            this.autor = prompt("Ingrese el autor del libro")
+            this.publicacion = parseInt(prompt("Ingrese el anio de publicacion del libro"))
+            this.idoma = prompt("Ingrese el idioma del libro")
+        }
+    }
+    switch(opciones){
+        case 1:{
         listarLibros()
         break
     }case 2:{
-        agregarLibro()
+        const nuevoLibro = new libro
+        libros.push(nuevoLibro)
         break
     }case 3:{
         borrarLibro()
@@ -55,27 +64,6 @@ function listarLibros(){
         console.log(libro)
     });
 }
-function agregarLibro(nombre,autor,publicacion,idioma){
-    nombre = prompt("Ingrese el nombre del libro")
-    autor = prompt("Ingrese el autor del libro")
-    publicacion = parseInt(prompt("Ingrese el anio de publicacion del libro"))
-    idioma = prompt("Ingrese el idioma del libro")
-    const libroAgregado = {
-        nombre,
-        autor,
-        publicacion,
-        idioma
-    }
-    libros.push(libroAgregado)
-}
-function borrarLibro(){
-    for(i=0; i<libros.length; i++){
-        console.log(libros[i].nombre + " | Indice: " + i)
-    }
-    const borrar = parseInt(prompt("Introduce el indice del libro a borrar"))
-    delete libros[borrar]
-    console.log(libros)
-}
 function buscarLibro(){
     const filtro = prompt("Ingrese el nombre del libro a buscar")
     const busqueda = libros.find((libro) => libro.nombre === filtro)
@@ -92,3 +80,4 @@ function filtrar(){
     const filtrado = libros.filter((libro) => libro.publicacion > 1950)
     console.log(filtrado)
 }
+console.log(libros)
