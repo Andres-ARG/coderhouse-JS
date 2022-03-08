@@ -18,14 +18,24 @@ const libros = [
         idioma: "Español",
     }
 ]
+const nombreBienvenida = prompt("Hola, cual es tu nombre?")
+const contenedor = document.createElement("div")
+contenedor.style.display = "block"
+contenedor.style.textAlign = "center"
+contenedor.style.padding = "20px"
+contenedor.style.fontWeight = "bold"
+contenedor.style.fontSize = "20px"
+contenedor.innerHTML = `Bienvenido/a ${nombreBienvenida}`
+const header = document.querySelector(".header")
+header.appendChild(contenedor)
+
 const opciones = parseInt(prompt(
     `Elija la opcion deseada:
     1- Listar libros de la biblioteca
     2- Agregar libro a la biblioteca
-    3- Borrar libro de la biblioteca
-    4- Buscar libro de la biblioteca
-    5- Filtrar
-    6- Salir
+    3- Buscar libro de la biblioteca
+    4- Filtrar
+    5- Salir
     `
     ))
     class libro{
@@ -36,29 +46,22 @@ const opciones = parseInt(prompt(
             this.idoma = prompt("Ingrese el idioma del libro")
         }
     }
-    switch(opciones){
-        case 1:{
-        listarLibros()
-        break
-    }case 2:{
-        const nuevoLibro = new libro
-        libros.push(nuevoLibro)
-        break
-    }case 3:{
-        borrarLibro()
-        break
-    }case 4:{
-        buscarLibro()
-        break
-    }case 5:{
-        filtrar()
-        break
+        switch(opciones){
+            case 1:{
+            listarLibros()
+            break
+        }case 2:{
+            const nuevoLibro = new libro
+            libros.push(nuevoLibro)
+            break
+        }case 3:{
+            buscarLibro()
+            break
+        }case 4:{
+            filtrar()
+            break
+        }
     }
-    default:{
-        alert("OPCION INVÁLIDA");
-        break;
-    }
-}
 function listarLibros(){
     libros.forEach(libro => {
         console.log(libro)
@@ -80,4 +83,3 @@ function filtrar(){
     const filtrado = libros.filter((libro) => libro.publicacion > 1950)
     console.log(filtrado)
 }
-console.log(libros)

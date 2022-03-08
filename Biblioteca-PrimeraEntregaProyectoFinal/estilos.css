@@ -79,6 +79,7 @@ input{
     border-bottom: 1px solid white;
     padding: 0.7rem 0;
     font-weight: bold;
+    color: white;
 }
 .formulario label, .formulario input, .formulario button{
     margin: 1rem 0;
