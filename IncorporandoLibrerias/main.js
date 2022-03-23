@@ -102,16 +102,26 @@ const temporizador = () => {
     const inputTemporizador = document.querySelector('.inputTemporizador').value
     const botonPauseTemporizador = document.querySelector(".botonPauseTemporizador")
     
+    if(inputTemporizador <= 0) return alertaToastify()
     let segundos = inputTemporizador
     const x = setInterval(() => {
         tiempoTemporizador.innerHTML = segundos
         segundos--
         if(segundos<0){
             clearInterval(x)
-            tiempoTemporizador.innerHTML = "TERMINADO!"
         }
         botonPauseTemporizador.addEventListener('click', () => {
             clearInterval(x)
         })
     }, 1000)
+}
+
+const alertaToastify = () => {
+        const botonPlayTemporizador = document.querySelector(".botonPlayTemporizador")
+        botonPlayTemporizador.addEventListener("click", () => {
+            Toastify({
+                text: "Ingresa un numero mayor que 0",
+                duration: 3000
+            }).showToast();
+        })
 }
