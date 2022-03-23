@@ -115,3 +115,36 @@ const temporizador = () => {
         })
     }, 1000)
 }
+
+
+// CONSIGNAS PARA DESAFIO COMPLEMENTARIO 'OPTIMIZANDO EL PROYECTO FINAL'
+
+//SPREAD
+const movimiento1 = {
+    id: 1,
+    nombre: 'flexion',
+    dificultad: 'media',
+    ventajas: 'Triceps y pecho'
+}
+
+const movimiento2 = { ...movimiento1}
+movimiento2.nombre = 'dominada'
+movimiento2.id = 2
+console.log(movimiento2)
+
+
+//DESESTRUCTURACION
+
+const lechuga = {
+    nombre: "lechuga",
+    verdura: true,
+    color: "verde"
+}
+
+const {nombre, verdura, color} = lechuga
+
+console.log(nombre, verdura, color)
+
+
+
+

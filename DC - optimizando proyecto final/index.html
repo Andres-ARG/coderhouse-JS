@@ -14,8 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Syne+Mono&display=swap" rel="stylesheet">
     <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="icon" href="img/favicon.jpg">
 </head>
 <body>
     <header class="header">
@@ -41,6 +42,24 @@
                     <i class="material-icons">done</i>
                     <i class="material-icons">delete</i>
                 </span>
+            </div>
+        </div>
+        <div class="contenedorTemporizador">
+            <h4 class="titleTemporizador m-3">TEMPORIZADOR</h4>
+            <p class="parrafoTemporizador">(En segundos)</p>
+            <input type="number" class="inputTemporizador my-2" placeholder="Introduzca el tiempo">
+            <span class="temporizador my-2">00:00</span>
+            <div class="contenedorBotonesTemporizador">
+                <button type="submit" class="botonPlayTemporizador" onclick="temporizador()">
+                    <span class="material-icons playTemporizador">
+                        play_circle_filled
+                    </span>
+                </button>
+                <button class="botonPauseTemporizador">
+                    <span class="material-icons pauseTemporizador">
+                        pause_circle
+                    </span>
+                </button>
             </div>
         </div>
     </main>
