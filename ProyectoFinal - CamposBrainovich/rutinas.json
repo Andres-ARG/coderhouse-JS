@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "primerEjercicio": "trotar",
+        "segundoEjercicio": "flexiones",
+        "tercerEjercicio": "abdominales",
+        "cuartoEjercicio": "dominadas",
+        "quintoEjercicio": "paralelas"
+    },
+    {
+        "id": 2,
+        "primerEjercicio": "flexiones",
+        "segundoEjercicio": "caminar",
+        "tercerEjercicio": "abdominales",
+        "cuartoEjercicio": "dominadas",
+        "quintoEjercicio": "biceps"
+    },
+    {
+        "id": 3,
+        "primerEjercicio": "bicicleta",
+        "segundoEjercicio": "flexiones",
+        "tercerEjercicio": "abdominales",
+        "cuartoEjercicio": "dominadas",
+        "quintoEjercicio": "flexiones diamante"
+    },
+    {
+        "id": 4,
+        "primerEjercicio": "trotar",
+        "segundoEjercicio": "flexiones",
+        "tercerEjercicio": "abdominales",
+        "cuartoEjercicio": "dominadas",
+        "quintoEjercicio": "dominadas supinas"
+    },
+    {
+        "id": 5,
+        "primerEjercicio": "trotar",
+        "segundoEjercicio": "flexiones",
+        "tercerEjercicio": "abdominales",
+        "cuartoEjercicio": "dominadas",
+        "quintoEjercicio": "dominadas lastradas"
+    }
+]

@@ -102,13 +102,13 @@ const temporizador = () => {
     const inputTemporizador = document.querySelector('.inputTemporizador').value
     const botonPauseTemporizador = document.querySelector(".botonPauseTemporizador")
     
-    if(inputTemporizador <= 0) return alertaToastify()
     let segundos = inputTemporizador
     const x = setInterval(() => {
         tiempoTemporizador.innerHTML = segundos
         segundos--
         if(segundos<0){
             clearInterval(x)
+            tiempoTemporizador.innerHTML = "TERMINADO!"
         }
         botonPauseTemporizador.addEventListener('click', () => {
             clearInterval(x)
@@ -116,12 +116,28 @@ const temporizador = () => {
     }, 1000)
 }
 
-const alertaToastify = () => {
-        const botonPlayTemporizador = document.querySelector(".botonPlayTemporizador")
-        botonPlayTemporizador.addEventListener("click", () => {
-            Toastify({
-                text: "Ingresa un numero mayor que 0",
-                duration: 3000
-            }).showToast();
+const contenido = document.querySelector('#contenido')
+
+function traer(){
+    fetch('rutinas.json')
+        .then( res => res.json() )
+        .then( datos => {
+            tabla(datos)
         })
+}
+
+function tabla(datos){
+    contenido.innerHTML = ''
+    for (const valor of datos) {
+        contenido.innerHTML += `
+        <tr>
+        <th scope="row">${valor.id}</th>
+        <td>${valor.primerEjercicio}</td>
+        <td>${valor.segundoEjercicio}</td>
+        <td>${valor.tercerEjercicio}</td>
+        <td>${valor.cuartoEjercicio}</td>
+        <td>${valor.quintoEjercicio}</td>
+        </tr>
+        `
+    }
 }

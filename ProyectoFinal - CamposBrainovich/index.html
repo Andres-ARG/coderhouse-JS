@@ -17,8 +17,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- FAVICON -->
     <link rel="icon" href="img/favicon.jpg">
-    <!-- TOASTIFY -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <header class="header">
@@ -64,6 +62,32 @@
                 </button>
             </div>
         </div>
+        <div class="imagenMain"></div>
+        <div class="dataRutinas container">
+            <h3 class="text-center">RUTINAS PREDISEÑADAS</h3>
+            <div class="rutinasTable my-5">
+                <button class="btn btn-danger my-4" onclick="traer()">Obtener Rutinas</button>
+                <div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">RUTINA</th>
+                            <th scope="col">Primer Ejercicio</th>
+                            <th scope="col">Segundo Ejercicio</th>
+                            <th scope="col">Tercer Ejercicio</th>
+                            <th scope="col">Cuarto Ejercicio</th>
+                            <th scope="col">Quinto Ejercicio</th>
+                          </tr>
+                        </thead>
+                        <tbody id="contenido">
+                          <tr>
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
     </main>
     
     <footer class="footer">
@@ -71,9 +95,7 @@
     </footer>
 
 
-    <!-- ENLACE A ARCHIVO PRINCIPAL JS -->
+    <!-- ENLACEs  A  JS -->
     <script src="main.js"></script>
-    <!-- ENLACE A TOASTIFY -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

@@ -81,6 +81,17 @@ i{
     cursor: pointer;
 }
 
+.imagenMain{
+    background-image: url(img/imagenn.jpg);
+    height: 70vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 3rem 0;
+}
+
 
 /* FOOTER */
 
